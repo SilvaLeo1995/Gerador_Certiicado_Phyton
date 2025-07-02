@@ -1,4 +1,4 @@
-**GERADOR AUTOMÁTICO DE CERTIFICADOS COM PYTHON**
+# GERADOR AUTOMÁTICO DE CERTIFICADOS COM PYTHON
 
 Este projeto foi desenvolvido com fins **educacionais**, como parte de um **curso gratuito de Python** ministrado pelo **Prof. Sauer** entre os dias **27/05/2025 e 28/05/2025**.  
 O objetivo principal é mostrar, na prática, como **automatizar tarefas com Python**, como:
@@ -7,7 +7,7 @@ O objetivo principal é mostrar, na prática, como **automatizar tarefas com Pyt
 - Manipulação de texto e geração de arquivos
 - Criação de documentos em PDF com formatação personalizada
 
-- **TECNOLOGIAS E BIBLIOTECAS UTILIZADAS**
+- ## TECNOLOGIAS E BIBLIOTECAS UTILIZADAS
 
 - Para tornar essa automação possível, foram utilizadas duas bibliotecas essenciais:
 
@@ -16,35 +16,35 @@ O objetivo principal é mostrar, na prática, como **automatizar tarefas com Pyt
 - Usada para ler o arquivo `dados.csv`, que contém os nomes dos participantes.
 - Permite percorrer os dados de forma simples e eficiente.
 
-**COMO FUNCIONA O PROJETO**
+## COMO FUNCIONA O PROJETO
 
 realiza as seguintes etapas:
 
-**1.** - Carrega os dados dos participantes de um arquivo chamado dados.csv.
+1. Carrega os dados dos participantes de um arquivo chamado dados.csv.
 
-**2.** - Define o conteúdo fixo do certificado, como título, texto descritivo e nome do professor.
+2. Define o conteúdo fixo do certificado, como título, texto descritivo e nome do professor.
 
-**3.** - Percorre cada nome da lista e gera um arquivo PDF individual com o nome personalizado.
+3. Percorre cada nome da lista e gera um arquivo PDF individual com o nome personalizado.
 
-**4.** - Adiciona um fundo personalizado (template.png) que simula um certificado real.
+4. Adiciona um fundo personalizado (template.png) que simula um certificado real.
 
-**5.** Salva os arquivos em PDF com nomes como: Certificado_NomeCompleto.pdf.
+5. Salva os arquivos em PDF com nomes como: Certificado_NomeCompleto.pdf.
 
-**EXECUÇÃO**
+## EXECUÇÃO
 
 import pandas as pd
 from fpdf import FPDF
 
 dados = pd.read_csv("dados.csv")
 
-# Informações fixas
+## Informações fixas
 titulo = "CERTIFICADO DE PARTICIPAÇÃO"
 subtitulo = "Este certificado comprova que"
 texto2 = "concluiu com êxito o curso GRATUITO DE PYTHON ministrado por"
 texto3 = "PROF. SAUER entre 27/05/2025 e 28/05/2025,"
 texto4 = "com carga horária de aproximadamente 08 horas."
 
-# Geração dos certificados
+## Geração dos certificados
 for nome in dados['nomecompleto']:
     pdf = FPDF()
     pdf.add_page()
@@ -60,11 +60,11 @@ for nome in dados['nomecompleto']:
 
     pdf.output(f"Certificado_{nome}.pdf")
 
-**RESULTADO ESPERADO**
+## RESULTADO ESPERADO
 
 Para cada nome listado no arquivo dados.csv, um PDF individual é criado com o nome da pessoa, pronto para ser impresso ou enviado por e-mail.
 
 **AUTOR**
 
-Leonardo Gabriel Silva
+**Leonardo Gabriel Silva** - **SilvaLeo1995**
 Este projeto foi desenvolvido como parte prática de um minicurso de Python.
